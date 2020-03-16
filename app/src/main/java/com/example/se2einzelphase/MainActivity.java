@@ -48,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
         String temp = "";
 
         for(int i=0; i < number.length(); i++){
-            temp = temp + ascii[Character.getNumericValue(number.charAt(i))];
+            if(i%2 == 0)
+                temp = temp + number.charAt(i);
+            else
+                temp = temp + ascii[Character.getNumericValue(number.charAt(i))];
         }
         return temp;
     }
